@@ -5,8 +5,62 @@
   font-family: "EB Garamond", serif;
 }
 
+html,
 body {
-  background: url("../images/background.webp");
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+nav {
+  flex-shrink: 0;
+}
+
+.main {
+  flex-grow: 1;
+  background: url("../images/background-main.webp");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.page {
+  flex-grow: 1;
+  background: url("../images/background-page.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mdi {
+  transition: all 0.3s ease;
+}
+
+.mdi:hover {
+  color: gray;
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    background: url("../images/background-tablet.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    background: url("../images/background-mobile.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .mail_section {
+    margin-bottom: 2rem;
+    padding: 0;
+  }
+  .mail {
+    align-items: end !important;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
 }

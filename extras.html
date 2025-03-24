@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -34,7 +34,7 @@
         </div>
 
         <div id="navMenu" class="navbar-menu">
-          <div class="navbar-start">
+          <div class="navbar-start has-text-centered">
             <a class="navbar-item is-size-5" href="./about.html"> About </a>
 
             <a class="navbar-item is-size-5" href="./books.html"> Books </a>
@@ -44,14 +44,14 @@
 
           <div class="navbar-end">
             <div class="navbar-item">
-              <div class="buttons">
+              <div class="buttons is-justify-content-center">
                 <a class="button is-small is-ghost">
-                  <span class="icon has-text-white is-size-4">
+                  <span class="icon has-text-white is-size-3">
                     <i class="mdi mdi-instagram"></i>
                   </span>
                 </a>
                 <a class="button is-small is-ghost">
-                  <span class="icon has-text-white is-size-4">
+                  <span class="icon has-text-white is-size-3">
                     <i class="mdi mdi-facebook"></i>
                   </span>
                 </a>
@@ -62,22 +62,33 @@
       </div>
     </nav>
     <main
-      class="section is-fullheight is-flex is-align-items-center is-justify-content-center"
+      class="page section is-flex is-align-items-center is-justify-content-center"
     >
-      <section class="section">
-        <div
-          class="is-flex is-flex-direction-column container has-text-centered"
-        >
+      <section class="container">
+        <div class="is-flex is-flex-direction-column has-text-centered">
           <figure class="image mx-auto mb-4" style="max-width: 500px">
-            <img src="./images/map.webp" />
+            <img src="./images/map.webp" alt="image of the map" />
           </figure>
-          <a class="has-text-white is-size-5">
+          <a
+            class="has-text-white is-size-5 js-modal-trigger"
+            data-target="modal-js-example"
+          >
             Click for the high-resolution image
           </a>
         </div>
       </section>
+      <section class="modal" id="modal-js-example">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <p class="image is-4by3">
+            <img src="./images/map-max.webp" alt="Zoomed view of the map" />
+          </p>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+      </section>
     </main>
 
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/modal.js"></script>
   </body>
 </html>
